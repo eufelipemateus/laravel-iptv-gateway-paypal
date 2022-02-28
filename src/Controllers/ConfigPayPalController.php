@@ -20,6 +20,7 @@ class ConfigPayPalController extends CoreController
 
         $data['client_id'] =  $request->input('client_id');
         $data['client_secret'] =  $request->input('client_secret');
+        $data['enviroment'] = $request->input('enviroment');
 
         $iptv_gateway->config_data =  @json_encode($data);
         $iptv_gateway->save();

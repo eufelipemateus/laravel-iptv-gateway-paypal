@@ -45,6 +45,17 @@
 							</div>
 						</div>
 
+
+                        <div class="form-group">
+							<label for="enviroment" class="col-md-4 control-label">{{ __('Enviroment') }}</label>
+                            <div class="col-md-6">
+								<select id="enviroment" class="form-control" name="enviroment"   >
+									<option @if(isset($config_paypal->enviroment)) @if($config_paypal->enviroment == 'sandbox') selected   @endif @endif value="sandbox">Sandbox</option>
+                                    <option @if(isset($config_paypal->enviroment)) @if($config_paypal->enviroment == 'production') selected   @endif @endif value="production">Production</option>
+                                </select>
+							</div>
+						</div>
+
                         <div class="row">
 							<div class="col-md-6 col-md-offset-5">
 								<button class="btn btn-primary">{{ __('Save')}}</button>
