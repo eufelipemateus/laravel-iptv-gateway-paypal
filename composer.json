@@ -1,0 +1,15 @@
+{
+    "name": "felipemateus/laravel-iptv-gateway-paypal",
+    "type": "library",
+    "require": {
+        "paypal/paypal-checkout-sdk": "1.0.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Felipe Mateus",
+            "email": "eu@felipemateus.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
