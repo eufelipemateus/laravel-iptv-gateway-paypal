@@ -17,7 +17,7 @@ class SeedPaypalConfig extends Migration
         IPTVGateway::create([
             'code' => 'paypal',
             'name'=> "Paypal",
-            'class_model' => '',
+            'class_model' => '\FelipeMateus\IPTVPaypal\Facades\Paypal',
             'config_data' => '',
             'active'=> 1
         ]);
