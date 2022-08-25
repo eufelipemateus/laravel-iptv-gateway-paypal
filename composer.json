@@ -23,5 +23,10 @@
                 "FelipeMateus\\IPTVPaypal\\IPTVPaymentProvider"
             ]
         }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php artisan db:seed --class=SeedPaypalConfig"
+        ]
     }
 }
