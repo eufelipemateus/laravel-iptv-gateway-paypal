@@ -14,13 +14,15 @@ class SeedPaypalConfig extends Migration
      */
     public function up()
     {
-        IPTVGateway::create([
-            'code' => 'paypal',
-            'name'=> "Paypal",
-            'class_model' => '\FelipeMateus\IPTVPaypal\Facades\Paypal',
-            'config_data' => '',
-            'active'=> 1
-        ]);
+        if(!IPTVGateway::firstWhere('code', 'paypal')){
+            IPTVGateway::create([
+                'code' => 'paypal',
+                'name'=> "Paypal",
+                'class_model' => '\FelipeMateus\IPTVPaypal\Facades\Paypal',
+                'config_data' => '',
+                'active'=> 1
+            ]);
+        }
 
     }
 
